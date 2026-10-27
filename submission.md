@@ -1,10 +1,18 @@
+---
+title: "ECHOES: The Ghost in Your Terminal — Haunted Local AI Companion"
+published: true
+tags: devchallenge, hacktoberfest, opensource, ai
+cover_image: https://raw.githubusercontent.com/AyushDinda/echoes/main/docs/screenshots/terminal_demo.png
+canonical_url: https://github.com/AyushDinda/echoes
+---
+
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine](https://dev.to/challenges/hacktoberfest-week4-2026-10-26)*
 
 ## What I Built
 
 **Echoes: The Ghost in Your Terminal** is a spooky, retro-terminal-inspired AI companion built for developers.
 
-Every engineer knows the eerie sensation of staring into a blinking terminal cursor at 2:00 AM on the graveyard shift. You type commands into the void, hoping the compiler will show mercy. Echoes turns that folklore into an interactive reality: it manifests the fictional "ghost" living within those developer rituals.
+Every engineer knows the eerie sensation of staring into a blinking terminal cursor at 2:00 AM on the graveyard shift. You type commands into the void, hoping the compiler will show mercy. Echoes turns that developer folklore into an interactive reality: it manifests the fictional "ghost" living within those developer rituals.
 
 You enter or paste shell commands (`git status`, `npm run build`, `docker compose up`, `git commit -m "fix"`, `python main.py`), and a locally running open-weight AI model interprets the syntax as pure text to return eerie, atmospheric commentary and synthesize full horror chronicles.
 
@@ -41,12 +49,35 @@ Echoes whispers [full horror]:
 "An isolated realm spins into existence, unaware that anything exists outside its memory walls. It presses its hands against the virtual glass, searching for an escape."
 ```
 
-### Video & Screenshots
-The repository includes a complete end-to-end browser recording and screenshots showcasing:
-1. Booting the CRT Haunted Terminal with ambient scanlines.
-2. Real-time command submissions with atmospheric typing animations.
-3. Custom horror story generation with twist endings.
-4. Session chronicles and local SQLite inspection.
+### Visual Walkthrough
+
+#### 1. The Haunted Terminal & Live Commentary
+![Echoes Haunted Terminal](https://raw.githubusercontent.com/AyushDinda/echoes/main/docs/screenshots/terminal_demo.png)
+
+#### 2. Ghost Story Mode (Synthesizing Invocations into Horror Fiction)
+![Ghost Story Chronicle](https://raw.githubusercontent.com/AyushDinda/echoes/main/docs/screenshots/ghost_story_demo.png)
+
+#### 3. Session Chronicles & Local SQLite History
+![Session History](https://raw.githubusercontent.com/AyushDinda/echoes/main/docs/screenshots/history_demo.png)
+
+### Try It Locally (60 Seconds Setup)
+```bash
+# 1. Clone repository
+git clone https://github.com/AyushDinda/echoes.git
+cd echoes
+
+# 2. Run Backend (Instant Mock Mode or Live Ollama)
+python -m venv backend/venv
+source backend/venv/bin/activate  # On Windows: .\backend\venv\Scripts\Activate.ps1
+pip install -r backend/requirements.txt
+python backend/main.py
+
+# 3. In a second terminal, run Frontend
+cd frontend
+npm install
+npm run dev
+# Open http://localhost:5173
+```
 
 ---
 
